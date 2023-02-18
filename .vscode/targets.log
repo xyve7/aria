@@ -1,0 +1,1283 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make -C kernel
+ 
+# make[1]: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
+ 
+# GNU Make 4.4
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2022 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Fri Feb 17 19:16:04 2023
+
+# Variables
+
+# 'override' directive (from 'GNUmakefile', line 77)
+OBJ := ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o  
+# 'override' directive (from 'GNUmakefile', line 3)
+KERNEL := kernel.elf
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
+# environment
+NIX_REMOTE = daemon
+# 'override' directive (from 'GNUmakefile', line 74)
+CFILES := ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c
+# environment
+VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/119/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /run/media/xyve/Data/Programming/osdev/os/aria
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/xyve
+# 'override' directive (from 'GNUmakefile', line 76)
+NASMFILES := 
+# environment
+XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/xyve/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS := /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# 'override' directive (from 'GNUmakefile', line 78)
+HEADER_DEPS := ./kernel.d ./libc/stdio/printf.d ./libc/stdio/putchar.d ./libc/stdio/puts.d ./libc/string/strcmp.d ./libc/string/memchr.d ./libc/string/memcmp.d ./libc/string/memcpy.d ./libc/string/memmove.d ./libc/string/memset.d ./libc/string/strcat.d ./libc/string/strchr.d ./libc/string/strcpy.d ./libc/string/strlen.d ./libc/string/strncat.d ./libc/string/strncmp.d ./libc/string/strncpy.d ./libc/string/strrchr.d ./panic.d ./term/term.d 
+# makefile
+CURDIR := /run/media/xyve/Data/Programming/osdev/os/aria/kernel
+# 'override' directive (from 'GNUmakefile', line 70)
+NASMFLAGS = -F dwarf -g -f elf64
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/xyve/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Adwaita
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'term/term.d', line 1)
+MAKEFILE_LIST := GNUmakefile kernel.d libc/stdio/printf.d libc/stdio/putchar.d libc/stdio/puts.d libc/string/strcmp.d libc/string/memchr.d libc/string/memcmp.d libc/string/memcpy.d libc/string/memmove.d libc/string/memset.d libc/string/strcat.d libc/string/strchr.d libc/string/strcpy.d libc/string/strlen.d libc/string/strncat.d libc/string/strncmp.d libc/string/strncpy.d libc/string/strrchr.d panic.d term/term.d
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 50429
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1197,unix/xyve:/tmp/.ICE-unix/1197
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# 'override' directive (from 'GNUmakefile', line 75)
+ASFILES := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# environment
+SHLVL = 3
+# environment
+MAKELEVEL := 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+SNAP_COOKIE = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+# default
+MAKEFILES := 
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+SNAP_USER_COMMON = /home/xyve/snap/code/common
+# environment
+SNAP = /snap/code/119
+# environment
+INVOCATION_ID = 4b27b5bd5dcd4004bf81712c5863e60b
+# environment
+SNAP_REVISION = 119
+# environment
+SNAP_REAL_HOME = /home/xyve
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+QT_SCREEN_SCALE_FACTORS = DVI-D-0=1;HDMI-0=1;DP-0=1;DP-1=1;HDMI-1-1=1;DP-1-1=1;
+# environment
+LOGNAME = xyve
+# makefile (from 'GNUmakefile', line 27)
+CPPFLAGS = 
+# environment
+SNAP_ARCH = amd64
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 9645
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = xyve
+# default
+MAKE_VERSION := 4.4
+# environment
+KDE_SESSION_UID = 1000
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+SNAP_DATA = /var/snap/code/119
+# environment
+SNAP_CONTEXT = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
+# 'override' directive (from 'GNUmakefile', line 66)
+LDFLAGS = -nostdlib -static -m elf_x86_64 -z max-page-size=0x1000 -T linker.ld -no-pie
+# environment
+MANAGERPID = 1110
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# 'override' directive (from 'GNUmakefile', line 36)
+CFLAGS = -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I.
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+JOURNAL_STREAM = 8:122153
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/xyve/.gtkrc-2.0:/home/xyve/.config/gtkrc-2.0
+# makefile (from 'GNUmakefile', line 6)
+define DEFAULT_VAR
+    ifeq ($(origin $1),default)
+        override $(1) := $(2)
+    endif
+    ifeq ($(origin $1),undefined)
+        override $(1) := $(2)
+    endif
+endef
+# environment
+HOME = /home/xyve
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
+# environment
+SNAP_NAME = code
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/119/usr/share/glib-2.0/schemas
+# environment
+XDG_SESSION_ID = 2
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+NIX_PATH = nixpkgs=/nix/var/nix/profiles/per-user/xyve/channels/nixpkgs:/nix/var/nix/profiles/per-user/xyve/channels
+# environment
+SNAP_VERSION = 441438ab
+# default
+SUFFIXES := 
+# makefile (from 'GNUmakefile', line 21)
+LD = ld
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink guile load
+# makefile (from 'GNUmakefile', line 18)
+CC = clang
+# environment
+KDE_FULL_SESSION = true
+# environment
+SNAP_USER_DATA = /home/xyve/snap/code/119
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# variable set hash-table stats:
+# Load=128/1024=12%, Rehash=0, Collisions=6/253=2%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2049, inode 38271): No files, no impossibilities so far.
+
+# No files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c limine.h
+#  recipe to execute (from 'GNUmakefile', line 96):
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+%.o: %.S limine.h
+#  recipe to execute (from 'GNUmakefile', line 100):
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+%.o: %.asm
+#  recipe to execute (from 'GNUmakefile', line 104):
+	nasm $(NASMFLAGS) $< -o $@
+
+# 3 implicit rules, 0 (0.0%) terminal.
+# Files
+
+libc/string/strcat.o: libc/string/strcat.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strcpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.6814374
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strchr.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strrchr.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strncat.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7079188
+#  File has been updated.
+#  Successfully updated.
+
+distclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 113):
+	rm -f limine.h
+
+# Not a target:
+libc/string/strcat.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+ 
+#  Last modified 2023-02-17 19:11:04.6552919
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/libc/stdio.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:04:40.6390707
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/strlen.o: libc/string/strlen.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/stdio/printf.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.5297593
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+panic.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7555005
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/memcpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.613064
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/memmove.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/stdio/puts.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.559382
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/memmove.o: libc/string/memmove.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/stdio/putchar.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.548343
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/memset.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memchr.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.585598
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/strrchr.o: libc/string/strrchr.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+kernel.elf: kernel.o libc/stdio/printf.o libc/stdio/putchar.o libc/stdio/puts.o libc/string/strcmp.o libc/string/memchr.o libc/string/memcmp.o libc/string/memcpy.o libc/string/memmove.o libc/string/memset.o libc/string/strcat.o libc/string/strchr.o libc/string/strcpy.o libc/string/strlen.o libc/string/strncat.o libc/string/strncmp.o libc/string/strncpy.o libc/string/strrchr.o panic.o term/term.o
+#  Implicit rule search has not been done.
+#  Last modified 2023-02-17 19:11:04.7863929
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'GNUmakefile', line 89):
+	$(LD) $(OBJ) $(LDFLAGS) -o $@
+
+kernel.o: kernel.c limine.h kernel.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'kernel'
+#  Last modified 2023-02-17 19:11:04.3599363
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := kernel.o
+# automatic
+# * := kernel
+# automatic
+# < := kernel.c
+# automatic
+# + := kernel.c limine.h kernel.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+# automatic
+# % := 
+# automatic
+# ^ := kernel.c limine.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h
+# automatic
+# ? := include/libc/printf.h
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
+#  recipe to execute (from 'GNUmakefile', line 96):
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+# Not a target:
+libc/string/strncpy.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7355781
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+panic.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strchr.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.6686455
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strrchr.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7487952
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/stdio/puts.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+kernel.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.358799
+#  File has been updated.
+#  Successfully updated.
+
+libc/stdio/putchar.o: libc/stdio/putchar.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memmove.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.6269937
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/strncat.o: libc/string/strncat.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strcmp.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/stdio/printf.o: libc/stdio/printf.c include/libc/printf.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/stdio/printf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/string/memcpy.o: libc/string/memcpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/string/memset.o: libc/string/memset.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 109):
+	rm -rf $(KERNEL) $(OBJ) $(HEADER_DEPS)
+
+libc/string/strncmp.o: libc/string/strncmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/string/strcpy.o: libc/string/strcpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/term/term.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 16:16:47.0042333
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/kernel.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 18:04:54.1413263
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strlen.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.6943415
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strncmp.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7213395
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/strchr.o: libc/string/strchr.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memcpy.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/string/memcmp.o: libc/string/memcmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strlen.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: kernel.elf
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+ 
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+# Not a target:
+libc/string/strcat.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memcmp.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strcpy.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memset.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.641234
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/strncpy.o: libc/string/strncpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+term/term.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+kernel.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:00.4778807
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strcmp.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.5728472
+#  File has been updated.
+#  Successfully updated.
+
+libc/stdio/puts.o: libc/stdio/puts.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strncat.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+limine.h:
+#  Implicit rule search has not been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 18:59:45.9215815
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'GNUmakefile', line 85):
+	curl https://raw.githubusercontent.com/limine-bootloader/limine/trunk/limine.h -o $@
+
+panic.o: panic.c include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memcmp.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.5993108
+#  File has been updated.
+#  Successfully updated.
+
+libc/string/memchr.o: libc/string/memchr.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+term/term.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:11:04.7723516
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/string/strncmp.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libc/string/strcmp.o: libc/string/strcmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/memchr.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean distclean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+term/term.o: term/term.c include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+libc/string/strncpy.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:15:38.0962259
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+libc/stdio/putchar.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/libc/printf.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:12:10.3191974
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=73/1024=7%, Rehash=0, Collisions=12/202=6%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 82 / storage = 1381 B / avg = 16 B
+# current buf: size = 8162 B / used = 1381 B / count = 82 / avg = 16 B
+
+# strcache performance: lookups = 189 / hit rate = 56%
+# hash-table stats:
+# Load=82/8192=1%, Rehash=0, Collisions=0/189=0%
+# Finished Make data base on Fri Feb 17 19:16:04 2023
+
+# make[1]: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
+# GNU Make 4.4
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2022 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Fri Feb 17 19:16:04 2023
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+ 
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
+# environment
+NIX_REMOTE = daemon
+# environment
+VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/119/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /run/media/xyve/Data/Programming/osdev/os/aria
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/xyve
+# environment
+XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/xyve/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS := /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /run/media/xyve/Data/Programming/osdev/os/aria
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/xyve/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = Adwaita
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'GNUmakefile', line 1)
+MAKEFILE_LIST := GNUmakefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 50429
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1197,unix/xyve:/tmp/.ICE-unix/1197
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 3
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+SNAP_COOKIE = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+# default
+MAKEFILES := 
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+SNAP_USER_COMMON = /home/xyve/snap/code/common
+# environment
+SNAP = /snap/code/119
+# environment
+INVOCATION_ID = 4b27b5bd5dcd4004bf81712c5863e60b
+# environment
+SNAP_REVISION = 119
+# environment
+SNAP_REAL_HOME = /home/xyve
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+QT_SCREEN_SCALE_FACTORS = DVI-D-0=1;HDMI-0=1;DP-0=1;DP-1=1;HDMI-1-1=1;DP-1-1=1;
+# environment
+LOGNAME = xyve
+# environment
+SNAP_ARCH = amd64
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 9645
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = xyve
+# default
+MAKE_VERSION := 4.4
+# environment
+KDE_SESSION_UID = 1000
+# environment
+SNAP_DATA = /var/snap/code/119
+# environment
+SNAP_CONTEXT = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
+# environment
+MANAGERPID = 1110
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+JOURNAL_STREAM = 8:122153
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/xyve/.gtkrc-2.0:/home/xyve/.config/gtkrc-2.0
+# environment
+HOME = /home/xyve
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
+# environment
+SNAP_NAME = code
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/119/usr/share/glib-2.0/schemas
+# environment
+XDG_SESSION_ID = 2
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+NIX_PATH = nixpkgs=/nix/var/nix/profiles/per-user/xyve/channels/nixpkgs:/nix/var/nix/profiles/per-user/xyve/channels
+# environment
+SNAP_VERSION = 441438ab
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink guile load
+# environment
+KDE_FULL_SESSION = true
+# environment
+SNAP_USER_DATA = /home/xyve/snap/code/119
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# variable set hash-table stats:
+# Load=115/1024=11%, Rehash=0, Collisions=3/153=2%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2049, inode 37680): 6 files, no impossibilities so far.
+
+# 6 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+distclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 74):
+	rm -rf limine ovmf-x64
+	$(MAKE) -C kernel distclean
+
+limine:
+#  Implicit rule search has not been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 18:59:45.6782753
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'GNUmakefile', line 28):
+	git clone https://github.com/limine-bootloader/limine.git --branch=v4.x-branch-binary --depth=1
+	make -C limine
+
+run-uefi: ovmf-x64 barebones.iso
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 13):
+	qemu-system-x86_64 -s -S -M q35 -m 2G -bios ovmf-x64/OVMF.fd -cdrom barebones.iso -boot d
+
+run-hdd: barebones.hdd
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 17):
+	qemu-system-x86_64 -s -S -M q35 -m 2G -hda barebones.hdd
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 69):
+	rm -rf iso_root barebones.iso barebones.hdd
+	$(MAKE) -C kernel clean
+
+all-hdd: barebones.hdd
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+ovmf-x64:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 24):
+	mkdir -p ovmf-x64
+	cd ovmf-x64 && curl -o OVMF-X64.zip https://efi.akeo.ie/OVMF/OVMF-X64.zip && 7z x OVMF-X64.zip
+
+run-hdd-uefi: ovmf-x64 barebones.hdd
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 21):
+	qemu-system-x86_64 -s -S -M q35 -m 2G -bios ovmf-x64/OVMF.fd -hda barebones.hdd
+
+kernel:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := kernel
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+#  recipe to execute (from 'GNUmakefile', line 33):
+	$(MAKE) -C kernel
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: barebones.iso
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+run: barebones.iso
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 9):
+	qemu-system-x86_64 -s -S -M q35 -m 2G -cdrom barebones.iso -boot d
+
+barebones.iso: limine kernel
+#  Implicit rule search has not been done.
+#  Last modified 2023-02-17 19:11:04.8982111
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'GNUmakefile', line 36):
+	rm -rf iso_root
+	mkdir -p iso_root
+	cp kernel/kernel.elf \
+		limine.cfg limine/limine.sys limine/limine-cd.bin limine/limine-cd-efi.bin iso_root/
+	xorriso -as mkisofs -b limine-cd.bin \
+		-no-emul-boot -boot-load-size 4 -boot-info-table \
+		--efi-boot limine-cd-efi.bin \
+		-efi-boot-part --efi-boot-image --protective-msdos-label \
+		iso_root -o barebones.iso
+	limine/limine-deploy barebones.iso
+	rm -rf iso_root
+
+barebones.hdd: limine kernel
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'GNUmakefile', line 49):
+	rm -f barebones.hdd
+	dd if=/dev/zero bs=1M count=0 seek=64 of=barebones.hdd
+	parted -s barebones.hdd mklabel gpt
+	parted -s barebones.hdd mkpart ESP fat32 2048s 100%
+	parted -s barebones.hdd set 1 esp on
+	limine/limine-deploy barebones.hdd
+	sudo losetup -Pf --show barebones.hdd >loopback_dev
+	sudo mkfs.fat -F 32 `cat loopback_dev`p1
+	mkdir -p img_mount
+	sudo mount `cat loopback_dev`p1 img_mount
+	sudo mkdir -p img_mount/EFI/BOOT
+	sudo cp -v kernel/kernel.elf limine.cfg limine/limine.sys img_mount/
+	sudo cp -v limine/BOOTX64.EFI img_mount/EFI/BOOT/
+	sync
+	sudo umount img_mount
+	sudo losetup -d `cat loopback_dev`
+	rm -rf loopback_dev img_mount
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all all-hdd run run-uefi run-hdd run-hdd-uefi kernel clean distclean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-17 19:14:29.1638211
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=0/72=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 23 / storage = 207 B / avg = 9 B
+# current buf: size = 8162 B / used = 207 B / count = 23 / avg = 9 B
+
+# strcache performance: lookups = 83 / hit rate = 72%
+# hash-table stats:
+# Load=23/8192=0%, Rehash=0, Collisions=0/83=0%
+# Finished Make data base on Fri Feb 17 19:16:04 2023
+
+ 

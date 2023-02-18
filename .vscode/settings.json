@@ -1,0 +1,7 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+		"term.h": "c",
+		"printf.h": "c"
+	}
+}

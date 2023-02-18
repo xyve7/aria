@@ -1,0 +1,29 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria'
+make -C kernel
+make[1]: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
+ 
+cc  -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I. -c kernel.c -o kernel.o
+ 
+cc  -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I. -c libc/stdio/printf.c -o libc/stdio/printf.o
+ 
+cc  -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I. -c libc/stdio/putchar.c -o libc/stdio/putchar.o
+ 
+cc  -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I. -c libc/stdio/puts.c -o libc/stdio/puts.o
+ 
+ld ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o   -nostdlib -static -m elf_x86_64 -z max-page-size=0x1000 -T linker.ld -no-pie -o kernel.elf
+make[1]: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
+ 
+rm -rf iso_root
+mkdir -p iso_root
+cp kernel/kernel.elf \
+	limine.cfg limine/limine.sys limine/limine-cd.bin limine/limine-cd-efi.bin iso_root/
+xorriso -as mkisofs -b limine-cd.bin \
+	-no-emul-boot -boot-load-size 4 -boot-info-table \
+	--efi-boot limine-cd-efi.bin \
+	-efi-boot-part --efi-boot-image --protective-msdos-label \
+	iso_root -o barebones.iso
+limine/limine-deploy barebones.iso
+rm -rf iso_root
+make: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria'
+ 
