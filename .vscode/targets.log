@@ -1,5 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make -C kernel
+ 
 # make[1]: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
  
 # GNU Make 4.4
@@ -9,7 +10,7 @@ make -C kernel
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Feb 18 14:48:12 2023
+# Make data base, printed on Sat Feb 18 19:46:39 2023
 
 # Variables
 
@@ -30,7 +31,9 @@ NIX_REMOTE = daemon
 # 'override' directive (from 'GNUmakefile', line 74)
 CFILES := ./cpu/x86_64/int/idt.c ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os/aria
+# environment
+WINDOWID = 104857602
 # default
 MAKE_COMMAND := make
 # automatic
@@ -57,6 +60,8 @@ XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/e
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
+# environment
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-2738.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
 # environment
@@ -100,15 +105,13 @@ MAKEFILE_LIST := GNUmakefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 7578
+VSCODE_PID = 3071
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
-# environment
-SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1183,unix/xyve:/tmp/.ICE-unix/1183
+SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1186,unix/xyve:/tmp/.ICE-unix/1186
 # automatic
 *F = $(notdir $*)
 # environment
@@ -146,7 +149,7 @@ SNAP_USER_COMMON = /home/xyve/snap/code/common
 # environment
 SNAP = /snap/code/119
 # environment
-INVOCATION_ID = df9406575987465693345d379029b3c8
+INVOCATION_ID = d21a53289d0d47dfa2dfc76e7a386d32
 # environment
 SNAP_REVISION = 119
 # environment
@@ -159,6 +162,8 @@ KDE_APPLICATIONS_AS_SCOPE = 1
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
+# environment
+ALACRITTY_LOG = /tmp/Alacritty-2738.log
 # automatic
 +F = $(notdir $+)
 # environment
@@ -182,7 +187,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1234
+SYSTEMD_EXEC_PID = 1241
 # environment
 DISPLAY = :0
 # environment
@@ -202,7 +207,7 @@ SNAP_CONTEXT = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
 # 'override' directive (from 'GNUmakefile', line 66)
 LDFLAGS = -nostdlib -static -m elf_x86_64 -z max-page-size=0x1000 -T linker.ld -no-pie
 # environment
-MANAGERPID = 1097
+MANAGERPID = 1099
 # environment
 _ = /usr/bin/make
 # environment
@@ -210,9 +215,13 @@ XDG_RUNTIME_DIR = /run/user/1000
 # 'override' directive (from 'GNUmakefile', line 36)
 CFLAGS = -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I.
 # environment
+COLORTERM = truecolor
+# environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:32997
+JOURNAL_STREAM = 8:28305
+# environment
+ALACRITTY_WINDOW_ID = 104857602
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -234,6 +243,8 @@ HOME = /home/xyve
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
+# environment
+TERM = alacritty
 # environment
 SNAP_NAME = code
 # environment
@@ -275,7 +286,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=127/1024=12%, Rehash=0, Collisions=5/212=2%
+# Load=132/1024=13%, Rehash=0, Collisions=6/217=3%
 
 # Pattern-specific Variable Values
 
@@ -293,7 +304,6 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 %.o: %.c limine.h
 #  recipe to execute (from 'GNUmakefile', line 96):
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
- 
 
 %.o: %.S limine.h
 #  recipe to execute (from 'GNUmakefile', line 100):
@@ -580,7 +590,6 @@ all: kernel.elf
 
 # Not a target:
 cpu/x86_64/int/idt.d:
- 
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -686,9 +695,10 @@ GNUmakefile:
 # strcache performance: lookups = 116 / hit rate = 43%
 # hash-table stats:
 # Load=65/8192=1%, Rehash=0, Collisions=0/116=0%
-# Finished Make data base on Sat Feb 18 14:48:12 2023
+# Finished Make data base on Sat Feb 18 19:46:39 2023
 
 # make[1]: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
+ 
 # GNU Make 4.4
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2022 Free Software Foundation, Inc.
@@ -696,7 +706,7 @@ GNUmakefile:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Feb 18 14:48:12 2023
+# Make data base, printed on Sat Feb 18 19:46:39 2023
 
 # Variables
 
@@ -711,7 +721,9 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
 # environment
 NIX_REMOTE = daemon
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os/aria
+# environment
+WINDOWID = 104857602
 # default
 MAKE_COMMAND := make
 # automatic
@@ -736,6 +748,8 @@ XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/e
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
+# environment
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-2738.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
 # environment
@@ -775,15 +789,13 @@ MAKEFILE_LIST := GNUmakefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 7578
+VSCODE_PID = 3071
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
-# environment
-SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1183,unix/xyve:/tmp/.ICE-unix/1183
+SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1186,unix/xyve:/tmp/.ICE-unix/1186
 # automatic
 *F = $(notdir $*)
 # environment
@@ -821,7 +833,7 @@ SNAP_USER_COMMON = /home/xyve/snap/code/common
 # environment
 SNAP = /snap/code/119
 # environment
-INVOCATION_ID = df9406575987465693345d379029b3c8
+INVOCATION_ID = d21a53289d0d47dfa2dfc76e7a386d32
 # environment
 SNAP_REVISION = 119
 # environment
@@ -834,6 +846,8 @@ KDE_APPLICATIONS_AS_SCOPE = 1
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
+# environment
+ALACRITTY_LOG = /tmp/Alacritty-2738.log
 # automatic
 +F = $(notdir $+)
 # environment
@@ -855,7 +869,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1234
+SYSTEMD_EXEC_PID = 1241
 # environment
 DISPLAY = :0
 # environment
@@ -871,19 +885,22 @@ SNAP_DATA = /var/snap/code/119
 # environment
 SNAP_CONTEXT = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
 # environment
-MANAGERPID = 1097
+MANAGERPID = 1099
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
+COLORTERM = truecolor
+# environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:32997
+JOURNAL_STREAM = 8:28305
+# environment
+ALACRITTY_WINDOW_ID = 104857602
 # environment
 XDG_SESSION_CLASS = user
 # environment
- 
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/xyve/.gtkrc-2.0:/home/xyve/.config/gtkrc-2.0
@@ -893,6 +910,8 @@ HOME = /home/xyve
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
+# environment
+TERM = alacritty
 # environment
 SNAP_NAME = code
 # environment
@@ -930,7 +949,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=2/152=1%
+# Load=119/1024=12%, Rehash=0, Collisions=3/157=2%
 
 # Pattern-specific Variable Values
 
@@ -1122,7 +1141,6 @@ barebones.hdd: limine kernel
 GNUmakefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
- 
 #  Last modified 2023-02-17 19:14:29.1638211
 #  File has been updated.
 #  Successfully updated.
@@ -1141,6 +1159,6 @@ GNUmakefile:
 # strcache performance: lookups = 83 / hit rate = 71%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/83=0%
-# Finished Make data base on Sat Feb 18 14:48:12 2023
+# Finished Make data base on Sat Feb 18 19:46:39 2023
 
  
