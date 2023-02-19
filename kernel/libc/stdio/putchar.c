@@ -8,5 +8,4 @@ int putchar(int c)
 void _putchar(char c)
 {
 	term_print_char(c);
-	return 0;
 }

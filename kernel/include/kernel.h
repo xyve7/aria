@@ -39,6 +39,8 @@
 
 
 #define packed __attribute__((packed))
+#define noreturn __attribute__((noreturn))
+#define interrupt __attribute__((interrupt))
 #define aligned(alignment) __attribute__((aligned(alignment)))
 
 #define kernel_null_seg 0x0

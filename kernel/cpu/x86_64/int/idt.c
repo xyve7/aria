@@ -8,7 +8,7 @@
  * 
  * @note The first 32 are exceptions, the next 16 are hardware interrupts, the rest are software interrupts.
  */
-extern void* int_handler_table[];
+extern void* int_handler_table[256];
 
 /**
  * @brief Interrupt Descriptor Table (IDT)
@@ -47,10 +47,15 @@ void idt_set_gate(u8 index, u64 handler, u8 attr) {
  * @return idt_response
  */
 idt_response idt_init(void) {
+
+	for (u64 i = 0; i < 32; i++) {
+		idt_set_gate(i, int_handler_table[i], 0x8E);
+	}
+
 	idtptr.address = (u64)&idt;
 	idtptr.size = (u16)(sizeof(idt_entry) * 256 - 1);
 
 	__asm__ __volatile__("lidt %0" :: "m" (idtptr));
 
-	return (idt_response){.idtr = idtptr};
+	return (idt_response){.idtr = idtptr, int_handler_table, 32};
 }

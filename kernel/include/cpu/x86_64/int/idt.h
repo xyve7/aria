@@ -38,9 +38,11 @@ typedef struct packed {
  */
 typedef struct {
 	idtr idtr;
+	void** int_handlers;
+	u64 size;
 } idt_response;
 
 void idt_set_gate(u8 index, u64 handler, u8 attr);
-idt_response idt_init(void)
+idt_response idt_init(void);
 
 #endif // IDT_H
