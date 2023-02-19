@@ -37,13 +37,13 @@
 %macro isr_err_stub 1
 isr_stub_%+%1:
 	push %1
-    call isr_trampoline 
+    jmp isr_trampoline 
 %endmacro
 %macro isr_no_err_stub 1
 isr_stub_%+%1:
 	push 0
 	push %1
-    call isr_trampoline
+    jmp isr_trampoline
 %endmacro
 
 ; All of the errors, with and without an error

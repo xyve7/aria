@@ -4,6 +4,7 @@
 #include <cpu/x86_64/int/idt.h>
 
 void _start(void) {
+	cli();
 	idt_response ridt = idt_init();
 
 	printf("interrupt descriptor table:\n");
@@ -14,6 +15,7 @@ void _start(void) {
 	}
 	
     printf("Hello World!\n");
+	sti();
 
 	__asm__ __volatile__("int $0");
 	hang();
