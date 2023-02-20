@@ -3,7 +3,6 @@ make: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria'
 git clone https://github.com/limine-bootloader/limine.git --branch=v4.x-branch-binary --depth=1
 make -C limine
 make -C kernel
- 
 make[1]: Entering directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
  
 curl https://raw.githubusercontent.com/limine-bootloader/limine/trunk/limine.h -o limine.h

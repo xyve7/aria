@@ -2,10 +2,22 @@
 
 bool binary;
 
+/**
+ * @brief Reads a value from the RTC register.
+ *
+ * @param reg the register to read from.
+ * @return the value read from the register.
+ */
 static inline u8 rtc_read(u8 reg) {
 	outb(rtc_write_port, reg);
 	return inb(rtc_read_port);
 }
+/**
+ * @brief Converts a BCD value to binary.
+ *
+ * @param bcd the BCD value to convert.
+ * @return the equivalent binary value.
+ */
 static inline u8 rtc_to_binary(u8 bcd) {
 	return (((bcd & 0xF0) >> 1) + ((bcd & 0xF0) >> 3) + (bcd & 0xf));
 }

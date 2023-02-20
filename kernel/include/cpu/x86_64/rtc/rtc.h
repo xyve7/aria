@@ -34,6 +34,12 @@ u8 rtc_day(void);
 u8 rtc_month(void);
 u8 rtc_year(void);
 u8 rtc_century(void);
+/**
+ * @brief Initializes the RTC and returns information about it.
+ *
+ * @param set_binary whether the RTC should use binary or BCD format.
+ * @return a struct containing information about the RTC.
+ */
 rtc_response rtc_init(bool set_binary);
 
 #endif // RTC_H
