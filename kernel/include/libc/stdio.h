@@ -6,6 +6,5 @@
 
 int puts(const char* str);
 int putchar(int c);
-void _putchar(char c);
 
 #endif // STDIO_H

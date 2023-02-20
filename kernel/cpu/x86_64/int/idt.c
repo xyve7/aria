@@ -49,7 +49,7 @@ void idt_set_gate(u8 index, u64 handler, u8 attr) {
 idt_response idt_init(void) {
 
 	for (u64 i = 0; i < 32; i++) {
-		idt_set_gate(i, int_handler_table[i], 0x8E);
+		idt_set_gate(i, (u64)int_handler_table[i], 0x8E);
 	}
 
 	idtptr.address = (u64)&idt[0];

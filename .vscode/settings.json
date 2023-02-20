@@ -3,6 +3,10 @@
     "files.associations": {
 		"term.h": "c",
 		"printf.h": "c",
-		"compare": "cpp"
+		"compare": "cpp",
+		"*.tcc": "c",
+		"kernel.h": "c",
+		"stddef.h": "c",
+		"stdint.h": "c"
 	}
 }

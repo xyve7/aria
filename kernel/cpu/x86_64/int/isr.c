@@ -1,10 +1,9 @@
 #include <cpu/x86_64/int/isr.h>
 
-interrupt void isr_handler(interrupt_frame* sf)
+noreturn void isr_handler(interrupt_frame* sf)
 {
 	printf("exception has occurred!\n");
 	printf("dump:\n");
-	printf("sizeof: %lu\n", sizeof(*sf));
 	printf("rax=%016lX rbx=%016lX rcx=%016lX rdx=%016lX\n", sf->rax, sf->rbx, sf->rcx, sf->rdx);
 	printf("rdi=%016lX rsi=%016lX rbp=%016lX rsp=%016lX\n", sf->rdi, sf->rsi, sf->rbp, sf->rsp);
 	printf("r8=%016lX r9=%016lX r10=%016lX r11=%016lX\n", 	sf->r8,  sf->r9,  sf->r10, sf->r11);

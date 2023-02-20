@@ -10,13 +10,12 @@ make -C kernel
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 19 11:59:23 2023
+# Make data base, printed on Sun Feb 19 21:16:10 2023
 
 # Variables
 
- 
 # 'override' directive (from 'GNUmakefile', line 77)
-OBJ := ./cpu/x86_64/int/except.o ./cpu/x86_64/int/idt.o ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o  ./cpu/x86_64/int/excepth.o
+OBJ := ./cpu/x86_64/int/idt.o ./cpu/x86_64/int/isr.o ./cpu/x86_64/rtc/rtc.o ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o ./utils/log.o  ./cpu/x86_64/int/isrh.o
 # 'override' directive (from 'GNUmakefile', line 3)
 KERNEL := kernel.elf
 # environment
@@ -30,11 +29,9 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
 # environment
 NIX_REMOTE = daemon
 # 'override' directive (from 'GNUmakefile', line 74)
-CFILES := ./cpu/x86_64/int/except.c ./cpu/x86_64/int/idt.c ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c
+CFILES := ./cpu/x86_64/int/idt.c ./cpu/x86_64/int/isr.c ./cpu/x86_64/rtc/rtc.c ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c ./utils/log.c
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os/aria
-# environment
-WINDOWID = 109051906
+VSCODE_CWD = /home/xyve
 # default
 MAKE_COMMAND := make
 # automatic
@@ -54,15 +51,13 @@ PWD = /run/media/xyve/Data/Programming/osdev/os/aria
 # environment
 MAIL = /var/spool/mail/xyve
 # 'override' directive (from 'GNUmakefile', line 76)
-NASMFILES := ./cpu/x86_64/int/excepth.asm
+NASMFILES := ./cpu/x86_64/int/isrh.asm
 # environment
 XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
-# environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-3679.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
 # environment
@@ -78,7 +73,7 @@ XAUTHORITY = /home/xyve/.Xauthority
 # makefile
 MAKEFLAGS = pqrR
 # 'override' directive (from 'GNUmakefile', line 78)
-HEADER_DEPS := ./cpu/x86_64/int/except.d ./cpu/x86_64/int/idt.d ./kernel.d ./libc/stdio/printf.d ./libc/stdio/putchar.d ./libc/stdio/puts.d ./libc/string/strcmp.d ./libc/string/memchr.d ./libc/string/memcmp.d ./libc/string/memcpy.d ./libc/string/memmove.d ./libc/string/memset.d ./libc/string/strcat.d ./libc/string/strchr.d ./libc/string/strcpy.d ./libc/string/strlen.d ./libc/string/strncat.d ./libc/string/strncmp.d ./libc/string/strncpy.d ./libc/string/strrchr.d ./panic.d ./term/term.d 
+HEADER_DEPS := ./cpu/x86_64/int/idt.d ./cpu/x86_64/int/isr.d ./cpu/x86_64/rtc/rtc.d ./kernel.d ./libc/stdio/printf.d ./libc/stdio/putchar.d ./libc/stdio/puts.d ./libc/string/strcmp.d ./libc/string/memchr.d ./libc/string/memcmp.d ./libc/string/memcpy.d ./libc/string/memmove.d ./libc/string/memset.d ./libc/string/strcat.d ./libc/string/strchr.d ./libc/string/strcpy.d ./libc/string/strlen.d ./libc/string/strncat.d ./libc/string/strncmp.d ./libc/string/strncpy.d ./libc/string/strrchr.d ./panic.d ./term/term.d ./utils/log.d 
 # makefile
 CURDIR := /run/media/xyve/Data/Programming/osdev/os/aria/kernel
 # 'override' directive (from 'GNUmakefile', line 70)
@@ -106,11 +101,13 @@ MAKEFILE_LIST := GNUmakefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3748
+VSCODE_PID = 55032
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
 SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1189,unix/xyve:/tmp/.ICE-unix/1189
 # automatic
@@ -163,8 +160,6 @@ KDE_APPLICATIONS_AS_SCOPE = 1
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
-# environment
-ALACRITTY_LOG = /tmp/Alacritty-3679.log
 # automatic
 +F = $(notdir $+)
 # environment
@@ -214,15 +209,11 @@ _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # 'override' directive (from 'GNUmakefile', line 36)
-CFLAGS = -g -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I.
-# environment
-COLORTERM = truecolor
+CFLAGS = -g -m64 -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno-stack-protector -fno-stack-check -fno-lto -fno-pie -fno-pic -m64 -march=x86-64 -mabi=sysv -mno-80387 -mno-mmx -mno-sse -mno-sse2 -mno-red-zone -mcmodel=kernel -MMD -I.
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
 JOURNAL_STREAM = 8:23518
-# environment
-ALACRITTY_WINDOW_ID = 109051906
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -244,8 +235,6 @@ HOME = /home/xyve
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
-# environment
-TERM = alacritty
 # environment
 SNAP_NAME = code
 # environment
@@ -287,7 +276,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=132/1024=13%, Rehash=0, Collisions=6/217=3%
+# Load=127/1024=12%, Rehash=0, Collisions=5/212=2%
 
 # Pattern-specific Variable Values
 
@@ -307,12 +296,12 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 %.o: %.S limine.h
- 
 #  recipe to execute (from 'GNUmakefile', line 100):
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 %.o: %.asm
 #  recipe to execute (from 'GNUmakefile', line 104):
+ 
 	nasm $(NASMFLAGS) $< -o $@
 
 # 3 implicit rules, 0 (0.0%) terminal.
@@ -413,7 +402,7 @@ libc/string/strrchr.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-kernel.elf: cpu/x86_64/int/except.o cpu/x86_64/int/idt.o kernel.o libc/stdio/printf.o libc/stdio/putchar.o libc/stdio/puts.o libc/string/strcmp.o libc/string/memchr.o libc/string/memcmp.o libc/string/memcpy.o libc/string/memmove.o libc/string/memset.o libc/string/strcat.o libc/string/strchr.o libc/string/strcpy.o libc/string/strlen.o libc/string/strncat.o libc/string/strncmp.o libc/string/strncpy.o libc/string/strrchr.o panic.o term/term.o cpu/x86_64/int/excepth.o
+kernel.elf: cpu/x86_64/int/idt.o cpu/x86_64/int/isr.o cpu/x86_64/rtc/rtc.o kernel.o libc/stdio/printf.o libc/stdio/putchar.o libc/stdio/puts.o libc/string/strcmp.o libc/string/memchr.o libc/string/memcmp.o libc/string/memcpy.o libc/string/memmove.o libc/string/memset.o libc/string/strcat.o libc/string/strchr.o libc/string/strcpy.o libc/string/strlen.o libc/string/strncat.o libc/string/strncmp.o libc/string/strncpy.o libc/string/strrchr.o panic.o term/term.o utils/log.o cpu/x86_64/int/isrh.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
@@ -429,32 +418,12 @@ kernel.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-cpu/x86_64/int/except.o: cpu/x86_64/int/except.c limine.h
+# Not a target:
+utils/log.d:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cpu/x86_64/int/except'
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := cpu/x86_64/int/except.o
-# automatic
-# * := cpu/x86_64/int/except
-# automatic
-# < := cpu/x86_64/int/except.c
-# automatic
-# + := cpu/x86_64/int/except.c limine.h
-# automatic
-# % := 
-# automatic
-# ^ := cpu/x86_64/int/except.c limine.h
-# automatic
-# ? := cpu/x86_64/int/except.c limine.h
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+#  Failed to be updated.
 
 # Not a target:
 libc/string/strncpy.d:
@@ -476,6 +445,14 @@ libc/string/strrchr.d:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
+
+# Not a target:
+cpu/x86_64/int/idt.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-19 17:03:54.9085095
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 kernel.d:
@@ -541,11 +518,39 @@ libc/string/strcpy.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+cpu/x86_64/int/idt.o: cpu/x86_64/int/idt.c limine.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'cpu/x86_64/int/idt'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := cpu/x86_64/int/idt.o
+# automatic
+# * := cpu/x86_64/int/idt
+# automatic
+# < := cpu/x86_64/int/idt.c
+# automatic
+# + := cpu/x86_64/int/idt.c limine.h
+# automatic
+# % := 
+# automatic
+# ^ := cpu/x86_64/int/idt.c limine.h
+# automatic
+# ? := cpu/x86_64/int/idt.c limine.h
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
+#  recipe to execute (from 'GNUmakefile', line 96):
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
 # Not a target:
-cpu/x86_64/int/idt.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+cpu/x86_64/rtc/rtc.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 
 # Not a target:
 libc/string/strlen.d:
@@ -568,14 +573,6 @@ libc/string/strchr.o:
 #  File has not been updated.
 
 # Not a target:
-cpu/x86_64/int/except.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-19 11:57:54.8721349
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 libc/string/memcmp.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -590,6 +587,7 @@ libc/string/memcmp.o:
 all: kernel.elf
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
@@ -604,6 +602,12 @@ cpu/x86_64/int/idt.d:
 #  Failed to be updated.
 
 # Not a target:
+cpu/x86_64/int/isrh.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 libc/string/memset.d:
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -613,7 +617,6 @@ libc/string/memset.d:
 # Not a target:
 libc/string/strncpy.o:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -629,6 +632,13 @@ libc/stdio/puts.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+cpu/x86_64/int/isr.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 
 limine.h:
 #  Implicit rule search has not been done.
@@ -671,20 +681,19 @@ libc/string/strcmp.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+utils/log.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 .PHONY: all clean distclean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-cpu/x86_64/int/except.d:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-cpu/x86_64/int/excepth.o:
+cpu/x86_64/rtc/rtc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -699,25 +708,31 @@ term/term.o:
 GNUmakefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 19:15:38.0962259
+#  Last modified 2023-02-19 17:01:33.8502136
 #  File has been updated.
 #  Successfully updated.
 
+# Not a target:
+cpu/x86_64/int/isr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=55/1024=5%, Rehash=0, Collisions=0/128=0%
+# Load=59/1024=6%, Rehash=0, Collisions=2/136=1%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 68 / storage = 1103 B / avg = 16 B
-# current buf: size = 8162 B / used = 1103 B / count = 68 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 72 / storage = 1151 B / avg = 15 B
+# current buf: size = 8162 B / used = 1151 B / count = 72 / avg = 15 B
 
-# strcache performance: lookups = 120 / hit rate = 43%
+# strcache performance: lookups = 126 / hit rate = 42%
 # hash-table stats:
-# Load=68/8192=1%, Rehash=0, Collisions=0/120=0%
-# Finished Make data base on Sun Feb 19 11:59:23 2023
+# Load=72/8192=1%, Rehash=0, Collisions=0/126=0%
+# Finished Make data base on Sun Feb 19 21:16:10 2023
 
 # make[1]: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
 # GNU Make 4.4
@@ -727,7 +742,7 @@ GNUmakefile:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 19 11:59:23 2023
+# Make data base, printed on Sun Feb 19 21:16:10 2023
 
 # Variables
 
@@ -742,9 +757,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
 # environment
 NIX_REMOTE = daemon
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os/aria
-# environment
-WINDOWID = 109051906
+VSCODE_CWD = /home/xyve
 # default
 MAKE_COMMAND := make
 # automatic
@@ -769,8 +782,6 @@ XDG_DATA_DIRS = /home/xyve/.local/share/flatpak/exports/share:/var/lib/flatpak/e
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
-# environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-3679.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/xyve/.config/Code/CachedData/441438abd1ac652551dbe4d408dfcec8a499b8bf
 # environment
@@ -810,11 +821,13 @@ MAKEFILE_LIST := GNUmakefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3748
+VSCODE_PID = 55032
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
 SESSION_MANAGER = local/xyve:@/tmp/.ICE-unix/1189,unix/xyve:/tmp/.ICE-unix/1189
 # automatic
@@ -867,8 +880,6 @@ KDE_APPLICATIONS_AS_SCOPE = 1
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
-# environment
-ALACRITTY_LOG = /tmp/Alacritty-3679.log
 # automatic
 +F = $(notdir $+)
 # environment
@@ -894,6 +905,7 @@ SYSTEMD_EXEC_PID = 1244
 # environment
 DISPLAY = :0
 # environment
+ 
 GTK_MODULES = canberra-gtk-module
 # environment
 USER = xyve
@@ -912,14 +924,9 @@ _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-COLORTERM = truecolor
- 
-# environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
 JOURNAL_STREAM = 8:23518
-# environment
-ALACRITTY_WINDOW_ID = 109051906
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -932,8 +939,6 @@ HOME = /home/xyve
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-c4b80823-1.75.1-main.sock
-# environment
-TERM = alacritty
 # environment
 SNAP_NAME = code
 # environment
@@ -971,7 +976,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=119/1024=12%, Rehash=0, Collisions=3/157=2%
+# Load=114/1024=11%, Rehash=0, Collisions=2/152=1%
 
 # Pattern-specific Variable Values
 
@@ -1181,6 +1186,6 @@ GNUmakefile:
 # strcache performance: lookups = 83 / hit rate = 71%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/83=0%
-# Finished Make data base on Sun Feb 19 11:59:23 2023
+# Finished Make data base on Sun Feb 19 21:16:10 2023
 
  

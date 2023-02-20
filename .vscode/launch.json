@@ -8,9 +8,6 @@
 			"program": "/run/media/xyve/Data/Programming/osdev/os/aria/kernel/kernel.elf",
 			"cwd": "/run/media/xyve/Data/Programming/osdev/os/aria",
 			"args": [],
-			"sourceFileMap": {
-				"<source-path>": "<target-path>"
-			},
 			"targetArchitecture": "x64",
 			"MIMode": "gdb",
 			"miDebuggerPath": "/usr/bin/gdb",
