@@ -23,38 +23,38 @@ static inline u8 rtc_to_binary(u8 bcd) {
 }
 u8 rtc_seconds(void) {
 	u8 ret = rtc_read(rtc_seconds_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_minutes(void) {
 	u8 ret = rtc_read(rtc_minutes_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_hours(void) {
 	u8 ret = rtc_read(rtc_hours_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_weekday(void) {
 	u8 ret = rtc_read(rtc_weekday_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_day(void) {
 	u8 ret = rtc_read(rtc_day_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_month(void) {
 	u8 ret = rtc_read(rtc_month_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_year(void) {
 	u8 ret = rtc_read(rtc_century_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
 u8 rtc_century(void) {
 	u8 ret = rtc_read(rtc_seconds_reg);
-	return binary ? rtc_to_binary(ret) : ret;
+	return binary ? ret : rtc_to_binary(ret);
 }
-void rtc_init(bool set_binary) {
+void rtc_init() {
 	u8 status = rtc_read(rtc_status_reg_b);
-	binary = set_binary;
+	binary = status & rtc_binary_bcd;
 	vlog_info("Real Time Clock (RTC) has been initialized\n");
 }

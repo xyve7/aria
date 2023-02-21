@@ -33,9 +33,8 @@ u8 rtc_century(void);
 /**
  * @brief Initializes the RTC and returns information about it.
  *
- * @param set_binary whether the RTC should use binary or BCD format.
  * @return a struct containing information about the RTC.
  */
-void rtc_init(bool set_binary);
+void rtc_init();
 
 #endif /* RTC_H */

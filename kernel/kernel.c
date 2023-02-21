@@ -7,7 +7,7 @@
 #include <utils/log.h>
 
 void _start(void) {
-	rtc_init(true);
+	rtc_init();
 	cli();
 	pic_init();
 	sti();
