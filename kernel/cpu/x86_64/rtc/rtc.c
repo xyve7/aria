@@ -53,8 +53,8 @@ u8 rtc_century(void) {
 	u8 ret = rtc_read(rtc_seconds_reg);
 	return binary ? rtc_to_binary(ret) : ret;
 }
-rtc_response rtc_init(bool set_binary) {
+void rtc_init(bool set_binary) {
 	u8 status = rtc_read(rtc_status_reg_b);
 	binary = set_binary;
-	return (rtc_response){.is_24_hour = (status & rtc_12_24_hour), .is_binary = binary};
+	vlog_info("Real Time Clock (RTC) has been initialized\n");
 }

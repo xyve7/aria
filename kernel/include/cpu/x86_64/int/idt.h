@@ -2,6 +2,7 @@
 #define IDT_H
 
 #include <kernel.h>
+#include <utils/log.h>
 
 /**
  * @brief Interrupt Descriptor Table (IDT) Entry
@@ -31,18 +32,20 @@ typedef struct packed {
 } idtr;
 
 /**
- * @brief Interrupt Descriptor Table (IDT) Response
+ * @brief Sets the Interrupt Descriptor Table (IDT) Entry (or Gate).
  * 
- * This structure is just the response from the "idt_init(void)" function.
- * 
+ * @param index The index of which entry you want to set.
+ * @param handler The address of the handler (cast is as a u64).
+ * @param attr The attributes (of flags). This tells us if its an trap gate or interrupt gate.
  */
-typedef struct {
-	idtr idtr;
-	void** int_handlers;
-	u64 size;
-} idt_response;
-
 void idt_set_gate(u8 index, u64 handler, u8 attr);
-idt_response idt_init(void);
+/**
+ * @brief Initializes the Interrupt Descriptor Table (IDT).
+ * 
+ * It defines the Interrupt Descriptor Table Register (IDTR) and loads it with the "lidt" instruction.
+ * 
+ * @return idt_response
+ */
+void idt_init(void);
 
-#endif // IDT_H
+#endif /* IDT_H */

@@ -35,5 +35,4 @@ void term_init()
 
 	/* Grab a limine terminal */
 	terminal = terminal_request.response->terminals[0];
-	
 }

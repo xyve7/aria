@@ -7,6 +7,24 @@
 		"*.tcc": "c",
 		"kernel.h": "c",
 		"stddef.h": "c",
-		"stdint.h": "c"
+		"stdint.h": "c",
+		"list": "c",
+		"array": "c",
+		"functional": "c",
+		"ratio": "c",
+		"tuple": "c",
+		"type_traits": "c",
+		"utility": "c",
+		"variant": "c",
+		"__hash_table": "c",
+		"__tree": "c",
+		"__tuple": "c",
+		"limits": "c",
+		"rtc.h": "c",
+		"cpu.h": "c",
+		"idt.h": "c",
+		"isr.h": "c",
+		"irq.h": "c",
+		"pic.h": "c"
 	}
 }

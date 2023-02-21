@@ -23,13 +23,6 @@ extern void* int_handler_table[];
 aligned(0x10) static idt_entry idt[256];
 static idtr idtptr;
 
-/**
- * @brief Sets the Interrupt Descriptor Table (IDT) Entry (or Gate).
- * 
- * @param index The index of which entry you want to set.
- * @param handler The address of the handler (cast is as a u64).
- * @param attr The attributes (of flags). This tells us if its an trap gate or interrupt gate.
- */
 void idt_set_gate(u8 index, u64 handler, u8 attr) {
 	idt[index].isr0 = (u16)word_0(handler);
 	idt[index].kernel_cs = kernel_64_code_seg;
@@ -39,16 +32,9 @@ void idt_set_gate(u8 index, u64 handler, u8 attr) {
 	idt[index].isr2 = (u32)dword_1(handler);
 	idt[index].reserved = 0;
 }
-/**
- * @brief Initializes the Interrupt Descriptor Table (IDT).
- * 
- * It defines the Interrupt Descriptor Table Register (IDTR) and loads it with the "lidt" instruction.
- * 
- * @return idt_response
- */
-idt_response idt_init(void) {
+void idt_init(void) {
 
-	for (u64 i = 0; i < 32; i++) {
+	for (u64 i = 0; i < 48; i++) {
 		idt_set_gate(i, (u64)int_handler_table[i], 0x8E);
 	}
 
@@ -57,5 +43,5 @@ idt_response idt_init(void) {
 
 	__asm__ __volatile__("lidt %0" :: "m" (idtptr));
 
-	return (idt_response){.idtr = idtptr, int_handler_table, 32};
+	vlog_info("Interrupt Descriptor Table (IDT) has been initialized\n");
 }

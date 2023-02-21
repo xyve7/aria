@@ -27,4 +27,14 @@
 #define dword_0(x) ((u32)((x) & 0xFFFFFFFF))
 #define dword_1(x) ((u32)(((x) >> 32) & 0xFFFFFFFF))
 
-#endif // BITMANIP_H
+/**
+ * @brief Macros for setting/clearing a bit
+ * 
+ * This is made for convenience.
+ * 
+ */
+#define bit_set(byte, bit) ((byte) |= (1 << (bit)))
+#define bit_clear(byte, bit) ((byte) &= ~(1 << (bit)))
+
+
+#endif /* BITMANIP_H */

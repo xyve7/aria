@@ -107,4 +107,4 @@ noreturn void kernel_panic(const char * msg, const char * file, const char * fun
 
 static volatile struct limine_terminal_request terminal_request;
 
-#endif // KERNEL_H
+#endif /* KERNEL_H */

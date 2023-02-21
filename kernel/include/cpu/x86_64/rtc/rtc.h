@@ -3,6 +3,7 @@
 
 #include <cpu/x86_64/cpu.h>
 #include <stdbool.h>
+#include <utils/log.h>
 
 #define rtc_seconds_reg   0x00
 #define rtc_minutes_reg   0x02
@@ -21,11 +22,6 @@
 #define rtc_12_24_hour	  0x02
 #define rtc_binary_bcd	  0x04
 
-typedef struct {
-	bool is_24_hour;
-	bool is_binary;
-} rtc_response;
-
 u8 rtc_seconds(void);
 u8 rtc_minutes(void);
 u8 rtc_hours(void);
@@ -40,6 +36,6 @@ u8 rtc_century(void);
  * @param set_binary whether the RTC should use binary or BCD format.
  * @return a struct containing information about the RTC.
  */
-rtc_response rtc_init(bool set_binary);
+void rtc_init(bool set_binary);
 
-#endif // RTC_H
+#endif /* RTC_H */
