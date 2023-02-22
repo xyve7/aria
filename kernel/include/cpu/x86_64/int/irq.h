@@ -14,5 +14,7 @@
  * @note This function should not be called by the user manually
  */
 void irq_handler(interrupt_frame* sf);
+void irq_install_handler(u8 index, void* handler);
+void irq_uninstall_handler(u8 index);
 
 #endif /* IRQ_H */

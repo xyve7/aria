@@ -65,4 +65,4 @@ static inline u32 inl(u16 port)
     return ret;
 }
 
-#endif /* CPU_H */
+#endif/* CPU_H */

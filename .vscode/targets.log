@@ -10,12 +10,13 @@ make -C kernel
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Feb 21 16:35:48 2023
+# Make data base, printed on Tue Feb 21 21:13:28 2023
 
 # Variables
 
+ 
 # 'override' directive (from 'GNUmakefile', line 77)
-OBJ := ./cpu/x86_64/int/idt.o ./cpu/x86_64/int/irq.o ./cpu/x86_64/int/isr.o ./cpu/x86_64/int/pic.o ./cpu/x86_64/rtc/rtc.o ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o ./utils/log.o  ./cpu/x86_64/cpuh.o ./cpu/x86_64/int/idth.o ./cpu/x86_64/int/irqh.o ./cpu/x86_64/int/isrh.o
+OBJ := ./cpu/x86_64/int/idt.o ./cpu/x86_64/int/irq.o ./cpu/x86_64/int/isr.o ./cpu/x86_64/int/pic.o ./cpu/x86_64/rtc/rtc.o ./include/cpu/x86_64/dev/ps2/keyboard.o ./include/cpu/x86_64/dev/ps2/ps2.o ./kernel.o ./libc/stdio/printf.o ./libc/stdio/putchar.o ./libc/stdio/puts.o ./libc/string/strcmp.o ./libc/string/memchr.o ./libc/string/memcmp.o ./libc/string/memcpy.o ./libc/string/memmove.o ./libc/string/memset.o ./libc/string/strcat.o ./libc/string/strchr.o ./libc/string/strcpy.o ./libc/string/strlen.o ./libc/string/strncat.o ./libc/string/strncmp.o ./libc/string/strncpy.o ./libc/string/strrchr.o ./panic.o ./term/term.o ./utils/log.o  ./cpu/x86_64/cpuh.o ./cpu/x86_64/int/idth.o ./cpu/x86_64/int/irqh.o ./cpu/x86_64/int/isrh.o
 # 'override' directive (from 'GNUmakefile', line 3)
 KERNEL := kernel.elf
 # environment
@@ -27,12 +28,11 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
 # environment
- 
 NIX_REMOTE = daemon
 # 'override' directive (from 'GNUmakefile', line 74)
-CFILES := ./cpu/x86_64/int/idt.c ./cpu/x86_64/int/irq.c ./cpu/x86_64/int/isr.c ./cpu/x86_64/int/pic.c ./cpu/x86_64/rtc/rtc.c ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c ./utils/log.c
+CFILES := ./cpu/x86_64/int/idt.c ./cpu/x86_64/int/irq.c ./cpu/x86_64/int/isr.c ./cpu/x86_64/int/pic.c ./cpu/x86_64/rtc/rtc.c ./include/cpu/x86_64/dev/ps2/keyboard.c ./include/cpu/x86_64/dev/ps2/ps2.c ./kernel.c ./libc/stdio/printf.c ./libc/stdio/putchar.c ./libc/stdio/puts.c ./libc/string/strcmp.c ./libc/string/memchr.c ./libc/string/memcmp.c ./libc/string/memcpy.c ./libc/string/memmove.c ./libc/string/memset.c ./libc/string/strcat.c ./libc/string/strchr.c ./libc/string/strcpy.c ./libc/string/strlen.c ./libc/string/strncat.c ./libc/string/strncmp.c ./libc/string/strncpy.c ./libc/string/strrchr.c ./panic.c ./term/term.c ./utils/log.c
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+VSCODE_CWD = /home/xyve
 # default
 MAKE_COMMAND := make
 # automatic
@@ -74,7 +74,7 @@ XAUTHORITY = /home/xyve/.Xauthority
 # makefile
 MAKEFLAGS = pqrR
 # 'override' directive (from 'GNUmakefile', line 78)
-HEADER_DEPS := ./cpu/x86_64/int/idt.d ./cpu/x86_64/int/irq.d ./cpu/x86_64/int/isr.d ./cpu/x86_64/int/pic.d ./cpu/x86_64/rtc/rtc.d ./kernel.d ./libc/stdio/printf.d ./libc/stdio/putchar.d ./libc/stdio/puts.d ./libc/string/strcmp.d ./libc/string/memchr.d ./libc/string/memcmp.d ./libc/string/memcpy.d ./libc/string/memmove.d ./libc/string/memset.d ./libc/string/strcat.d ./libc/string/strchr.d ./libc/string/strcpy.d ./libc/string/strlen.d ./libc/string/strncat.d ./libc/string/strncmp.d ./libc/string/strncpy.d ./libc/string/strrchr.d ./panic.d ./term/term.d ./utils/log.d 
+HEADER_DEPS := ./cpu/x86_64/int/idt.d ./cpu/x86_64/int/irq.d ./cpu/x86_64/int/isr.d ./cpu/x86_64/int/pic.d ./cpu/x86_64/rtc/rtc.d ./include/cpu/x86_64/dev/ps2/keyboard.d ./include/cpu/x86_64/dev/ps2/ps2.d ./kernel.d ./libc/stdio/printf.d ./libc/stdio/putchar.d ./libc/stdio/puts.d ./libc/string/strcmp.d ./libc/string/memchr.d ./libc/string/memcmp.d ./libc/string/memcpy.d ./libc/string/memmove.d ./libc/string/memset.d ./libc/string/strcat.d ./libc/string/strchr.d ./libc/string/strcpy.d ./libc/string/strlen.d ./libc/string/strncat.d ./libc/string/strncmp.d ./libc/string/strncpy.d ./libc/string/strrchr.d ./panic.d ./term/term.d ./utils/log.d 
 # makefile
 CURDIR := /run/media/xyve/Data/Programming/osdev/os/aria/kernel
 # 'override' directive (from 'GNUmakefile', line 70)
@@ -98,11 +98,11 @@ XCURSOR_THEME = Adwaita
 # environment
 XDG_SESSION_DESKTOP = KDE
 # makefile (from 'utils/log.d', line 1)
-MAKEFILE_LIST := GNUmakefile cpu/x86_64/int/idt.d cpu/x86_64/int/irq.d cpu/x86_64/int/isr.d cpu/x86_64/int/pic.d cpu/x86_64/rtc/rtc.d kernel.d libc/stdio/printf.d libc/stdio/putchar.d libc/stdio/puts.d libc/string/strcmp.d libc/string/memchr.d libc/string/memcmp.d libc/string/memcpy.d libc/string/memmove.d libc/string/memset.d libc/string/strcat.d libc/string/strchr.d libc/string/strcpy.d libc/string/strlen.d libc/string/strncat.d libc/string/strncmp.d libc/string/strncpy.d libc/string/strrchr.d panic.d term/term.d utils/log.d
+MAKEFILE_LIST := GNUmakefile cpu/x86_64/int/idt.d cpu/x86_64/int/irq.d cpu/x86_64/int/isr.d cpu/x86_64/int/pic.d cpu/x86_64/rtc/rtc.d include/cpu/x86_64/dev/ps2/keyboard.d include/cpu/x86_64/dev/ps2/ps2.d kernel.d libc/stdio/printf.d libc/stdio/putchar.d libc/stdio/puts.d libc/string/strcmp.d libc/string/memchr.d libc/string/memcmp.d libc/string/memcpy.d libc/string/memmove.d libc/string/memset.d libc/string/strcat.d libc/string/strchr.d libc/string/strcpy.d libc/string/strlen.d libc/string/strncat.d libc/string/strncmp.d libc/string/strncpy.d libc/string/strrchr.d panic.d term/term.d utils/log.d
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 5018
+VSCODE_PID = 23410
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -148,7 +148,7 @@ SNAP_USER_COMMON = /home/xyve/snap/code/common
 # environment
 SNAP = /snap/code/119
 # environment
-INVOCATION_ID = cd0251afccff4815bccecdd5e1d5fb5a
+INVOCATION_ID = b96bfd8215cd425a92019988a920b8b1
 # environment
 SNAP_REVISION = 119
 # environment
@@ -184,7 +184,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1204
+SYSTEMD_EXEC_PID = 1259
 # environment
 DISPLAY = :0
 # environment
@@ -214,7 +214,7 @@ CFLAGS = -g -m64 -O2 -pipe -Wall -Wextra -Iinclude/ -std=c11 -ffreestanding -fno
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:30227
+JOURNAL_STREAM = 8:28192
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -277,7 +277,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=127/1024=12%, Rehash=0, Collisions=5/258=2%
+# Load=127/1024=12%, Rehash=0, Collisions=5/268=2%
 
 # Pattern-specific Variable Values
 
@@ -286,15 +286,11 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Directories
 
 # cpu/x86_64/rtc (device 2049, inode 59876): No files, no impossibilities so far.
-# libc/stdio (device 2049, inode 38645): No files, no impossibilities so far.
-# libc/string (device 2049, inode 38728): No files, no impossibilities so far.
-# cpu/x86_64 (device 2049, inode 58321): 6 files, no impossibilities.
-# utils (device 2049, inode 59872): No files, no impossibilities so far.
+# include/cpu/x86_64/dev/ps2 (device 2049, inode 60109): No files, no impossibilities so far.
 # . (device 2049, inode 38271): No files, no impossibilities so far.
-# term (device 2049, inode 39598): No files, no impossibilities so far.
-# cpu/x86_64/int (device 2049, inode 58322): 20 files, no impossibilities.
+# cpu/x86_64/int (device 2049, inode 58322): No files, no impossibilities so far.
 
-# 26 files, no impossibilities in 8 directories.
+# No files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -313,46 +309,37 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # 3 implicit rules, 0 (0.0%) terminal.
 # Files
 
-libc/string/strcat.o: libc/string/strcat.c limine.h libc/string/strcat.c
-#  Implicit rule search has been done.
- 
-#  Implicit/static pattern stem: 'libc/string/strcat'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1892434
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strcat.o: libc/string/strcat.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strcpy.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.214799
+ 
+#  Last modified 2023-02-21 20:49:40.6783313
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/strchr.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:52:13.0841471
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strrchr.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2320276
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strncat.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2430773
+#  Last modified 2023-02-21 20:49:40.7023414
 #  File has been updated.
 #  Successfully updated.
 
@@ -365,10 +352,18 @@ distclean: clean
 	rm -f limine.h
 
 # Not a target:
+include/cpu/x86_64/dev/ps2/keyboard.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-21 20:49:40.3766845
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 libc/string/strcat.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1883038
+#  Last modified 2023-02-21 20:49:40.6532426
 #  File has been updated.
 #  Successfully updated.
 
@@ -388,21 +383,16 @@ include/cpu/x86_64/int/idt.h:
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/strlen.o: libc/string/strlen.c limine.h libc/string/strlen.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strlen'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2288327
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strlen.o: libc/string/strlen.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/stdio/printf.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0616085
+#  Last modified 2023-02-21 20:49:40.5232623
 #  File has been updated.
 #  Successfully updated.
 
@@ -410,7 +400,7 @@ libc/stdio/printf.d:
 panic.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.293453
+#  Last modified 2023-02-21 20:49:40.7498081
 #  File has been updated.
 #  Successfully updated.
 
@@ -418,94 +408,82 @@ panic.d:
 libc/string/memcpy.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1472346
+#  Last modified 2023-02-21 20:49:40.611383
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/memmove.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2333452
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/stdio/puts.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0885832
+#  Last modified 2023-02-21 20:49:40.5531237
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/memmove.o: libc/string/memmove.c limine.h libc/string/memmove.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/memmove'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1626132
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/memmove.o: libc/string/memmove.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/stdio/putchar.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0764575
+#  Last modified 2023-02-21 20:49:40.540609
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
+include/cpu/x86_64/dev/ps2/ps2.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 libc/string/memset.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2340033
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/memchr.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1177415
+#  Last modified 2023-02-21 20:49:40.5820478
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/strrchr.o: libc/string/strrchr.c limine.h libc/string/strrchr.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strrchr'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2875724
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
-
-kernel.elf: cpu/x86_64/int/idt.o cpu/x86_64/int/irq.o cpu/x86_64/int/isr.o cpu/x86_64/int/pic.o cpu/x86_64/rtc/rtc.o kernel.o libc/stdio/printf.o libc/stdio/putchar.o libc/stdio/puts.o libc/string/strcmp.o libc/string/memchr.o libc/string/memcmp.o libc/string/memcpy.o libc/string/memmove.o libc/string/memset.o libc/string/strcat.o libc/string/strchr.o libc/string/strcpy.o libc/string/strlen.o libc/string/strncat.o libc/string/strncmp.o libc/string/strncpy.o libc/string/strrchr.o panic.o term/term.o utils/log.o cpu/x86_64/cpuh.o cpu/x86_64/int/idth.o cpu/x86_64/int/irqh.o cpu/x86_64/int/isrh.o
+libc/string/strrchr.o: libc/string/strrchr.c
 #  Implicit rule search has not been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3589402
+#  Modification time never checked.
+#  File has not been updated.
+
+kernel.elf: cpu/x86_64/int/idt.o cpu/x86_64/int/irq.o cpu/x86_64/int/isr.o cpu/x86_64/int/pic.o cpu/x86_64/rtc/rtc.o include/cpu/x86_64/dev/ps2/keyboard.o include/cpu/x86_64/dev/ps2/ps2.o kernel.o libc/stdio/printf.o libc/stdio/putchar.o libc/stdio/puts.o libc/string/strcmp.o libc/string/memchr.o libc/string/memcmp.o libc/string/memcpy.o libc/string/memmove.o libc/string/memset.o libc/string/strcat.o libc/string/strchr.o libc/string/strcpy.o libc/string/strlen.o libc/string/strncat.o libc/string/strncmp.o libc/string/strncpy.o libc/string/strrchr.o panic.o term/term.o utils/log.o cpu/x86_64/cpuh.o cpu/x86_64/int/idth.o cpu/x86_64/int/irqh.o cpu/x86_64/int/isrh.o
+#  Implicit rule search has not been done.
+#  Last modified 2023-02-21 20:49:40.8178015
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'GNUmakefile', line 89):
 	$(LD) $(OBJ) $(LDFLAGS) -o $@
 
-kernel.o: kernel.c limine.h kernel.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h include/cpu/x86_64/int/idt.h include/utils/log.h include/cpu/x86_64/rtc/rtc.h include/cpu/x86_64/cpu.h include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/bitmanip.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'kernel'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.9354284
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+kernel.o: kernel.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h include/cpu/x86_64/int/idt.h include/utils/log.h include/cpu/x86_64/rtc/rtc.h include/cpu/x86_64/cpu.h include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/bitmanip.h cpu/x86_64/dev/ps2/keyboard.h cpu/x86_64/dev/ps2/ps2.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 utils/log.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3266063
+#  Last modified 2023-02-21 20:49:40.7815415
 #  File has been updated.
 #  Successfully updated.
 
@@ -513,23 +491,21 @@ utils/log.d:
 libc/string/strncpy.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2726946
+#  Last modified 2023-02-21 20:49:40.7307498
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 panic.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 14:09:07.8831605
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strchr.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2016803
+#  Last modified 2023-02-21 20:49:40.6662239
 #  File has been updated.
 #  Successfully updated.
 
@@ -537,7 +513,7 @@ libc/string/strchr.d:
 libc/string/strrchr.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2865542
+#  Last modified 2023-02-21 20:49:40.7434878
 #  File has been updated.
 #  Successfully updated.
 
@@ -551,110 +527,97 @@ cpu/x86_64/int/idt.c:
 
 # Not a target:
 libc/stdio/puts.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 19:01:10.441631
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 kernel.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.9340187
+#  Last modified 2023-02-21 20:49:40.405702
 #  File has been updated.
 #  Successfully updated.
 
-libc/stdio/putchar.o: libc/stdio/putchar.c limine.h libc/stdio/putchar.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/stdio/putchar'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0777456
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
-
-# Not a target:
-cpu/x86_64/int/idth.asm:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 20:20:11.4848438
-#  File has been updated.
-#  Successfully updated.
+libc/stdio/putchar.o: libc/stdio/putchar.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/memmove.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1615323
+#  Last modified 2023-02-21 20:49:40.6273393
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/strncat.o: libc/string/strncat.c limine.h libc/string/strncat.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strncat'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2442302
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strncat.o: libc/string/strncat.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strcmp.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
- 
-#  Last modified 2023-02-17 14:51:52.2333121
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-libc/stdio/printf.o: libc/stdio/printf.c limine.h libc/stdio/printf.c include/libc/printf.h
+include/cpu/x86_64/dev/ps2/keyboard.o: include/cpu/x86_64/dev/ps2/keyboard.c limine.h include/cpu/x86_64/dev/ps2/keyboard.c cpu/x86_64/dev/ps2/keyboard.h include/cpu/x86_64/cpu.h include/kernel.h limine.h include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/bitmanip.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h cpu/x86_64/dev/ps2/ps2.h
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/stdio/printf'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0655778
+#  Implicit/static pattern stem: 'include/cpu/x86_64/dev/ps2/keyboard'
+#  Last modified 2023-02-21 20:49:40.3777686
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := include/cpu/x86_64/dev/ps2/keyboard.o
+# automatic
+# * := include/cpu/x86_64/dev/ps2/keyboard
+# automatic
+# < := include/cpu/x86_64/dev/ps2/keyboard.c
+# automatic
+# + := include/cpu/x86_64/dev/ps2/keyboard.c limine.h include/cpu/x86_64/dev/ps2/keyboard.c cpu/x86_64/dev/ps2/keyboard.h include/cpu/x86_64/cpu.h include/kernel.h limine.h include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/bitmanip.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h cpu/x86_64/dev/ps2/ps2.h
+# automatic
+# % := 
+# automatic
+# ^ := include/cpu/x86_64/dev/ps2/keyboard.c limine.h cpu/x86_64/dev/ps2/keyboard.h include/cpu/x86_64/cpu.h include/kernel.h include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/bitmanip.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h cpu/x86_64/dev/ps2/ps2.h
+# automatic
+# ? := include/cpu/x86_64/dev/ps2/keyboard.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
 #  recipe to execute (from 'GNUmakefile', line 96):
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+libc/stdio/printf.o: libc/stdio/printf.c include/libc/printf.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/stdio/printf.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 19:34:29.3888601
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-libc/string/memcpy.o: libc/string/memcpy.c limine.h libc/string/memcpy.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/memcpy'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1479881
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/memcpy.o: libc/string/memcpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 include/cpu/x86_64/cpu.h:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 17:42:31.4097772
+#  Last modified 2023-02-21 20:22:32.4035305
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/memset.o: libc/string/memset.c limine.h libc/string/memset.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/memset'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1763165
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/memset.o: libc/string/memset.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -664,41 +627,28 @@ clean:
 #  recipe to execute (from 'GNUmakefile', line 109):
 	rm -rf $(KERNEL) $(OBJ) $(HEADER_DEPS)
 
-libc/string/strncmp.o: libc/string/strncmp.c limine.h libc/string/strncmp.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strncmp'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2591837
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strncmp.o: libc/string/strncmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-libc/string/strcpy.o: libc/string/strcpy.c limine.h libc/string/strcpy.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strcpy'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2156578
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strcpy.o: libc/string/strcpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-cpu/x86_64/int/idth.o: cpu/x86_64/int/idth.asm
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cpu/x86_64/int/idth'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3361173
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 104):
-	nasm $(NASMFLAGS) $< -o $@
+# Not a target:
+cpu/x86_64/int/idth.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
+ 
 cpu/x86_64/int/idt.o: cpu/x86_64/int/idt.c limine.h cpu/x86_64/int/idt.c include/cpu/x86_64/int/idt.h include/kernel.h limine.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h include/cpu/x86_64/cpu.h include/bitmanip.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'cpu/x86_64/int/idt'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8355028
+#  Last modified 2023-02-21 20:49:40.2721284
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'GNUmakefile', line 96):
@@ -708,7 +658,7 @@ cpu/x86_64/int/idt.o: cpu/x86_64/int/idt.c limine.h cpu/x86_64/int/idt.c include
 cpu/x86_64/rtc/rtc.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.9200363
+#  Last modified 2023-02-21 20:49:40.3616928
 #  File has been updated.
 #  Successfully updated.
 
@@ -732,7 +682,7 @@ include/term/term.h:
 libc/string/strlen.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2280131
+#  Last modified 2023-02-21 20:49:40.689665
 #  File has been updated.
 #  Successfully updated.
 
@@ -740,7 +690,7 @@ libc/string/strlen.d:
 libc/string/strncmp.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2579777
+#  Last modified 2023-02-21 20:49:40.7161131
 #  File has been updated.
 #  Successfully updated.
 
@@ -748,7 +698,7 @@ libc/string/strncmp.d:
 cpu/x86_64/int/pic.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8855964
+#  Last modified 2023-02-21 20:49:40.3279306
 #  File has been updated.
 #  Successfully updated.
 
@@ -760,31 +710,22 @@ include/cpu/x86_64/int/isr.h:
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/strchr.o: libc/string/strchr.c limine.h libc/string/strchr.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strchr'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2024405
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strchr.o: libc/string/strchr.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-cpu/x86_64/int/irqh.o: cpu/x86_64/int/irqh.asm
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cpu/x86_64/int/irqh'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3386971
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 104):
-	nasm $(NASMFLAGS) $< -o $@
+# Not a target:
+cpu/x86_64/int/irqh.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/int/irq.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.848305
+#  Last modified 2023-02-21 20:49:40.2909468
 #  File has been updated.
 #  Successfully updated.
 
@@ -798,21 +739,14 @@ include/cpu/x86_64/int/pic.h:
 
 # Not a target:
 libc/string/memcpy.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 15:18:57.9877432
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-libc/string/memcmp.o: libc/string/memcmp.c limine.h libc/string/memcmp.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/memcmp'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1335947
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/memcmp.o: libc/string/memcmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/int/isr.c:
@@ -824,11 +758,9 @@ cpu/x86_64/int/isr.c:
 
 # Not a target:
 libc/string/strlen.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2325368
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 include/utils/log.h:
@@ -839,24 +771,24 @@ include/utils/log.h:
 #  Successfully updated.
 
 # Not a target:
+cpu/x86_64/dev/ps2/keyboard.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-21 20:49:36.4535843
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-cpu/x86_64/cpuh.asm:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 20:20:03.9430259
-#  File has been updated.
-#  Successfully updated.
-
 cpu/x86_64/int/irq.o: cpu/x86_64/int/irq.c limine.h cpu/x86_64/int/irq.c include/cpu/x86_64/int/irq.h include/cpu/x86_64/int/pic.h include/cpu/x86_64/cpu.h include/kernel.h limine.h include/bitmanip.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'cpu/x86_64/int/irq'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8497145
+#  Last modified 2023-02-21 20:49:40.2919601
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'GNUmakefile', line 96):
@@ -867,124 +799,94 @@ all: kernel.elf
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 
 # Not a target:
 libc/string/strcat.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2333395
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-cpu/x86_64/cpuh.o: cpu/x86_64/cpuh.asm
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cpu/x86_64/cpuh'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3302393
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 104):
-	nasm $(NASMFLAGS) $< -o $@
+# Not a target:
+cpu/x86_64/cpuh.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/int/irq.c:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 20:37:17.9514916
+#  Last modified 2023-02-21 20:39:48.1119649
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/memcmp.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2340327
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/int/idt.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8338124
+#  Last modified 2023-02-21 20:49:40.2705658
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/strcpy.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2333042
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
- 
-cpu/x86_64/int/isrh.o: cpu/x86_64/int/isrh.asm
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'cpu/x86_64/int/isrh'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3424394
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 104):
-	nasm $(NASMFLAGS) $< -o $@
+# Not a target:
+cpu/x86_64/int/isrh.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/memset.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1751834
+#  Last modified 2023-02-21 20:49:40.6400061
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/strncpy.o: libc/string/strncpy.c limine.h libc/string/strncpy.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strncpy'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.2737483
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strncpy.o: libc/string/strncpy.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 include/cpu/x86_64/int/irq.h:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 19:36:34.0749811
+#  Last modified 2023-02-21 20:30:58.5122836
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 term/term.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 14:16:06.0754464
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 kernel.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:02:48.4760252
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-cpu/x86_64/int/irqh.asm:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 20:20:11.4850956
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strcmp.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1033221
+#  Last modified 2023-02-21 20:49:40.5686865
 #  File has been updated.
 #  Successfully updated.
 
@@ -996,31 +898,24 @@ include/bitmanip.h:
 #  File has been updated.
 #  Successfully updated.
 
-libc/stdio/puts.o: libc/stdio/puts.c limine.h libc/stdio/puts.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/stdio/puts'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.0895127
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/stdio/puts.o: libc/stdio/puts.c include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/int/isr.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8646612
+#  Last modified 2023-02-21 20:49:40.3071232
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/strncat.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2329149
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 limine.h:
 #  Implicit rule search has not been done.
@@ -1031,23 +926,16 @@ limine.h:
 #  recipe to execute (from 'GNUmakefile', line 85):
 	curl https://raw.githubusercontent.com/limine-bootloader/limine/trunk/limine.h -o $@
 
-panic.o: panic.c limine.h panic.c include/kernel.h limine.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'panic'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.294342
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+panic.o: panic.c include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 utils/log.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 13:40:10.1399482
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 cpu/x86_64/rtc/rtc.c:
@@ -1061,69 +949,64 @@ cpu/x86_64/rtc/rtc.c:
 libc/string/memcmp.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1326062
+#  Last modified 2023-02-21 20:49:40.5969383
 #  File has been updated.
 #  Successfully updated.
 
-libc/string/memchr.o: libc/string/memchr.c limine.h libc/string/memchr.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/memchr'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1185385
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/memchr.o: libc/string/memchr.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
+ 
 # Not a target:
 term/term.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3092071
+#  Last modified 2023-02-21 20:49:40.7650526
+#  File has been updated.
+#  Successfully updated.
+
+include/cpu/x86_64/dev/ps2/ps2.o: include/cpu/x86_64/dev/ps2/ps2.c cpu/x86_64/dev/ps2/ps2.h include/cpu/x86_64/cpu.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+cpu/x86_64/dev/ps2/ps2.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2023-02-21 20:23:48.7863406
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 libc/string/strncmp.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2320507
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-libc/string/strcmp.o: libc/string/strcmp.c limine.h libc/string/strcmp.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libc/string/strcmp'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.1040539
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+libc/string/strcmp.o: libc/string/strcmp.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/memchr.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:57.5595986
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-utils/log.o: utils/log.c limine.h utils/log.c include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h include/cpu/x86_64/rtc/rtc.h include/cpu/x86_64/cpu.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'utils/log'
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.3280565
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+utils/log.o: utils/log.c include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/kernel.h limine.h include/cpu/x86_64/rtc/rtc.h include/cpu/x86_64/cpu.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 cpu/x86_64/int/pic.o: cpu/x86_64/int/pic.c limine.h cpu/x86_64/int/pic.c include/cpu/x86_64/int/pic.h include/cpu/x86_64/cpu.h include/kernel.h limine.h include/bitmanip.h include/utils/log.h include/libc/stdio.h include/libc/printf.h include/term/term.h include/cpu/x86_64/rtc/rtc.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'cpu/x86_64/int/pic'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.8871769
+#  Last modified 2023-02-21 20:49:40.3293357
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'GNUmakefile', line 96):
@@ -1146,38 +1029,38 @@ cpu/x86_64/rtc/rtc.o: cpu/x86_64/rtc/rtc.c limine.h cpu/x86_64/rtc/rtc.c include
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'cpu/x86_64/rtc/rtc'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.9227125
+#  Last modified 2023-02-21 20:49:40.3634706
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'GNUmakefile', line 96):
- 
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 # Not a target:
-cpu/x86_64/int/isrh.asm:
+include/cpu/x86_64/dev/ps2/keyboard.c:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 20:20:11.4848181
+#  Last modified 2023-02-21 21:13:23.7434153
 #  File has been updated.
 #  Successfully updated.
 
-term/term.o: term/term.c limine.h term/term.c include/term/term.h include/kernel.h limine.h
+# Not a target:
+include/cpu/x86_64/dev/ps2/ps2.d:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'term/term'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:19.310446
+#  Last modified 2023-02-21 20:49:40.392435
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'GNUmakefile', line 96):
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+term/term.o: term/term.c include/term/term.h include/kernel.h limine.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 libc/string/strncpy.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-17 14:51:52.2320225
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 GNUmakefile:
@@ -1197,11 +1080,9 @@ include/cpu/x86_64/rtc/rtc.h:
 
 # Not a target:
 libc/stdio/putchar.c:
-#  Implicit rule search has been done.
-#  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-19 13:00:06.6983548
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 include/libc/printf.h:
@@ -1215,27 +1096,27 @@ cpu/x86_64/int/isr.o: cpu/x86_64/int/isr.c limine.h cpu/x86_64/int/isr.c include
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'cpu/x86_64/int/isr'
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-02-20 21:04:18.866024
+#  Last modified 2023-02-21 20:49:40.3087565
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'GNUmakefile', line 96):
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 # files hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=26/472=6%
+# Load=111/1024=11%, Rehash=0, Collisions=24/383=6%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 183 / storage = 3029 B / avg = 16 B
-# current buf: size = 8162 B / used = 3029 B / count = 183 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 130 / storage = 2485 B / avg = 19 B
+# current buf: size = 8162 B / used = 2485 B / count = 130 / avg = 19 B
 
-# strcache performance: lookups = 471 / hit rate = 61%
+# strcache performance: lookups = 352 / hit rate = 63%
 # hash-table stats:
-# Load=183/8192=2%, Rehash=0, Collisions=0/471=0%
-# Finished Make data base on Tue Feb 21 16:35:48 2023
+# Load=130/8192=2%, Rehash=0, Collisions=0/352=0%
+# Finished Make data base on Tue Feb 21 21:13:28 2023
 
 # make[1]: Leaving directory '/run/media/xyve/Data/Programming/osdev/os/aria/kernel'
  
@@ -1245,9 +1126,8 @@ cpu/x86_64/int/isr.o: cpu/x86_64/int/isr.c limine.h cpu/x86_64/int/isr.c include
 # License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue Feb 21 16:35:48 2023
+# Make data base, printed on Tue Feb 21 21:13:28 2023
 
 # Variables
 
@@ -1262,7 +1142,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/xyve/.gtkrc:/home/xyve/.config/gtkrc
 # environment
 NIX_REMOTE = daemon
 # environment
-VSCODE_CWD = /run/media/xyve/Data/Programming/osdev/os
+VSCODE_CWD = /home/xyve
 # default
 MAKE_COMMAND := make
 # automatic
@@ -1326,7 +1206,7 @@ MAKEFILE_LIST := GNUmakefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 5018
+VSCODE_PID = 23410
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -1372,7 +1252,7 @@ SNAP_USER_COMMON = /home/xyve/snap/code/common
 # environment
 SNAP = /snap/code/119
 # environment
-INVOCATION_ID = cd0251afccff4815bccecdd5e1d5fb5a
+INVOCATION_ID = b96bfd8215cd425a92019988a920b8b1
 # environment
 SNAP_REVISION = 119
 # environment
@@ -1406,7 +1286,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1204
+SYSTEMD_EXEC_PID = 1259
 # environment
 DISPLAY = :0
 # environment
@@ -1425,12 +1305,13 @@ SNAP_CONTEXT = ckfcCMSlQ2KVZT6xeq7dBuMZmbMjiZFp8DeflMWbCRvux3R0SU5y
 MANAGERPID = 1117
 # environment
 _ = /usr/bin/make
+ 
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/xyve/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:30227
+JOURNAL_STREAM = 8:28192
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -1480,7 +1361,7 @@ SNAP_USER_DATA = /home/xyve/snap/code/119
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=2/155=1%
+# Load=114/1024=11%, Rehash=0, Collisions=2/152=1%
 
 # Pattern-specific Variable Values
 
@@ -1564,14 +1445,13 @@ run-hdd-uefi: ovmf-x64 barebones.hdd
 #  recipe to execute (from 'GNUmakefile', line 21):
 	qemu-system-x86_64 -s -S -M q35 -m 2G -bios ovmf-x64/OVMF.fd -hda barebones.hdd
 
- 
 kernel:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # automatic
 # @ := kernel
 # automatic
@@ -1604,10 +1484,9 @@ all: barebones.iso
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
+#  File has not been updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 run: barebones.iso
 #  Phony target (prerequisite of .PHONY).
@@ -1619,28 +1498,10 @@ run: barebones.iso
 
 barebones.iso: limine kernel
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  Last modified 2023-02-20 21:04:19.4788725
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := barebones.iso
-# automatic
-# * := 
-# automatic
-# < := limine
-# automatic
-# + := limine kernel
-# automatic
-# % := 
-# automatic
-# ^ := limine kernel
-# automatic
-# ? := kernel
-# automatic
-# | := 
+#  Last modified 2023-02-21 20:49:40.948129
+#  File has not been updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'GNUmakefile', line 36):
 	rm -rf iso_root
 	mkdir -p iso_root
@@ -1666,6 +1527,7 @@ barebones.hdd: limine kernel
 	parted -s barebones.hdd set 1 esp on
 	limine/limine-deploy barebones.hdd
 	sudo losetup -Pf --show barebones.hdd >loopback_dev
+ 
 	sudo mkfs.fat -F 32 `cat loopback_dev`p1
 	mkdir -p img_mount
 	sudo mount `cat loopback_dev`p1 img_mount
@@ -1707,9 +1569,9 @@ GNUmakefile:
 # strcache buffers: 1 (0) / strings = 24 / storage = 212 B / avg = 8 B
 # current buf: size = 8162 B / used = 212 B / count = 24 / avg = 8 B
 
-# strcache performance: lookups = 85 / hit rate = 71%
+# strcache performance: lookups = 84 / hit rate = 71%
 # hash-table stats:
-# Load=24/8192=0%, Rehash=0, Collisions=0/85=0%
-# Finished Make data base on Tue Feb 21 16:35:48 2023
+# Load=24/8192=0%, Rehash=0, Collisions=0/84=0%
+# Finished Make data base on Tue Feb 21 21:13:28 2023
 
  
