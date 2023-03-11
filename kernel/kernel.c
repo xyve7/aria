@@ -6,6 +6,7 @@
 #include <cpu/x86_64/int/irq.h>
 #include <cpu/x86_64/dev/ps2/keyboard.h>
 #include <utils/log.h>
+#include <sys/mm/pmm.h>
 
 void _start(void) {
 	rtc_init();
@@ -14,6 +15,7 @@ void _start(void) {
 	sti();
 	idt_init();
 	keyboard_init();
+	pmm_init();
 	
 	hang();
 }

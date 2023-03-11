@@ -2,7 +2,6 @@
 #define STRING_H
 
 #include <stddef.h>
-#include "libc.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,4 +31,4 @@ size_t strlen(const char* str);
 }
 #endif
 
-#endif
+#endif/* STRING_H */

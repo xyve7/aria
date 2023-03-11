@@ -45,7 +45,9 @@ typedef __UINT32_TYPE__ u32;
 #ifdef __UINT64_TYPE__
 typedef __UINT64_TYPE__ u64;
 #endif
-
+#ifdef __UINT64_TYPE__
+typedef __UINT64_TYPE__ size_t;
+#endif
 #ifdef __INTPTR_TYPE__
 typedef __INTPTR_TYPE__ iptr;
 #endif
@@ -53,6 +55,10 @@ typedef __INTPTR_TYPE__ iptr;
 typedef __UINTPTR_TYPE__ uptr;
 #endif
 
+#define NULL ((void*)0)
+#define bool u8
+#define true 1
+#define false 0
 
 /**
  * @brief Disable interrupts.
@@ -105,6 +111,32 @@ noreturn void kernel_panic(const char * msg, const char * file, const char * fun
 #define kernel_64_code_seg 0x28
 #define kernel_64_data_seg 0x30
 
-static volatile struct limine_terminal_request terminal_request;
+#define page_size 4096
 
-#endif /* KERNEL_H */
+/* Gotten from Limine: https://github.com/limine-bootloader/limine/blob/d1e4b9946cf61f3c91ca0ffabd4a5336100ba453/common/lib/misc.h */
+#define DIV_ROUNDUP(a, b) ({ \
+    __auto_type DIV_ROUNDUP_a = (a); \
+    __auto_type DIV_ROUNDUP_b = (b); \
+    (DIV_ROUNDUP_a + (DIV_ROUNDUP_b - 1)) / DIV_ROUNDUP_b; \
+})
+
+#define ALIGN_UP(x, a) ({ \
+    __auto_type ALIGN_UP_value = (x); \
+    __auto_type ALIGN_UP_align = (a); \
+    ALIGN_UP_value = DIV_ROUNDUP(ALIGN_UP_value, ALIGN_UP_align) * ALIGN_UP_align; \
+    ALIGN_UP_value; \
+})
+
+#define ALIGN_DOWN(x, a) ({ \
+    __auto_type ALIGN_DOWN_value = (x); \
+    __auto_type ALIGN_DOWN_align = (a); \
+    ALIGN_DOWN_value = (ALIGN_DOWN_value / ALIGN_DOWN_align) * ALIGN_DOWN_align; \
+    ALIGN_DOWN_value; \
+})
+
+
+static volatile struct limine_terminal_request terminal_request;
+static volatile struct limine_hhdm_request hhdm_request;
+static volatile struct limine_memmap_request memmap_request;
+
+#endif/* KERNEL_H */

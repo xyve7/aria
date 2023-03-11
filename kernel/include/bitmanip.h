@@ -35,7 +35,6 @@
  */
 #define bit_set(byte, bit) ((byte) |= (1 << (bit)))
 #define bit_clear(byte, bit) ((byte) &= ~(1 << (bit)))
-
 #define bit_get(byte, bit) ((byte) & (1 << (bit)))
 
 

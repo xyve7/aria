@@ -25,6 +25,11 @@
 		"idt.h": "c",
 		"isr.h": "c",
 		"irq.h": "c",
-		"pic.h": "c"
+		"pic.h": "c",
+		"limine.h": "c",
+		"string": "c",
+		"string_view": "c",
+		"vector": "c",
+		"bitmanip.h": "c"
 	}
 }
