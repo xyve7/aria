@@ -17,5 +17,10 @@ void _start(void) {
 	keyboard_init();
 	pmm_init();
 	
+	char* page = pmm_alloc(1);
+	memset(page + hhdm_request.response->offset, 'A', 4095);
+	page[4095] = '\0';
+	printf("%s\n", page);
+
 	hang();
 }

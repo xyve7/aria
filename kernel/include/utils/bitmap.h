@@ -1,16 +1,17 @@
 #ifndef BITMAP_H
 #define BITMAP_H
 
-#include <bitmanip.h>
 #include <kernel.h>
+#include <bitmanip.h>
 
-typedef struct {
-	u8* data;
-	size_t size;
-} bitmap;
+static inline void bitmap_clear(u8* bitmap, u64 index) {
+	bit_clear(bitmap[index / 8], index % 8);	
+}
+static inline void bitmap_set(u8* bitmap, u64 index) {
+	bit_set(bitmap[index / 8], index % 8);	
+}
+static inline bool bitmap_get(u8* bitmap, u64 index) {
+	bit_get(bitmap[index / 8], index % 8);	
+}
 
-bool bitmap_get(bitmap* bm, size_t index);
-void bitmap_set(bitmap* bm, size_t index);
-void bitmap_clear(bitmap* bm, size_t index);
-
-#endif/* BITMAP_H */
+#endif
