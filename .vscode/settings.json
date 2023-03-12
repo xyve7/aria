@@ -30,6 +30,7 @@
 		"string": "c",
 		"string_view": "c",
 		"vector": "c",
-		"bitmanip.h": "c"
+		"bitmanip.h": "c",
+		"pmm.h": "c"
 	}
 }

@@ -55,11 +55,6 @@ typedef __INTPTR_TYPE__ iptr;
 typedef __UINTPTR_TYPE__ uptr;
 #endif
 
-#define NULL ((void*)0)
-#define bool u8
-#define true 1
-#define false 0
-
 /**
  * @brief Disable interrupts.
  *
