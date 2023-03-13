@@ -2,6 +2,7 @@
 #define KERNEL_H
 
 #include <limine.h>
+#include <stdarg.h>
 
 /**
  * @brief Defines integer types of specific widths.
@@ -95,8 +96,8 @@ typedef __UINTPTR_TYPE__ uptr;
 #define interrupt __attribute__((interrupt))
 #define aligned(alignment) __attribute__((aligned(alignment)))
 
-noreturn void kernel_panic(const char * msg, const char * file, const char * func, u32 line, ...);
-#define panic(msg, ...) kernel_panic(msg, __FILE__, __func__, __LINE__, ##__VA_ARGS__)
+noreturn void kernel_panic(const char * format, const char * file, const char * function, u32 line, ...);
+#define panic(format, ...) kernel_panic(format, __FILE__, __func__, __LINE__, ##__VA_ARGS__)
 
 #define kernel_null_seg 0x0
 #define kernel_16_code_seg 0x8

@@ -21,7 +21,7 @@ CC ?= clang
 LD ?= ld
 
 # User controllable CFLAGS.
-CFLAGS ?= -g -m64 -O2 -pipe -Wall -Wextra -Iinclude/
+CFLAGS ?= -g -m64 -pipe -Wall -Wextra -Iinclude/
 
 # User controllable preprocessor flags. We set none by default.
 CPPFLAGS ?=

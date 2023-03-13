@@ -90,31 +90,51 @@ void pmm_init(void) {
 			}
 		}
 	}
-
+	
 }
 
 void* pmm_find_contigious(u64 pages) {
-	u64 index = pmm_last_alloc;
-	size_t i = index;
+	u64 start_page = pmm_last_alloc;
 	/* Iterates through the entire bitmap, finding a contiguous block */
-	for(i; (i < pmm_highest_page) && (i < (index + pages)) && !bitmap_get(pmm_bitmap, i); i++) {
-
-	}
-	/* Checks if it found one */
-	if(i == (index + pages)) {
-		/* make sure to mark the entire range of pages to used*/
-		bitmap_set(pmm_bitmap, index);
-		/* Offsets the last allocation by the size, so it doesn't have to iterate through the known used pages */
-		pmm_last_alloc = index + pages;
-		return (void*)(index * page_size);
+	for(start_page; start_page < pmm_highest_page; start_page++) {
+		size_t i = start_page;
+		for(i;i < (start_page + pages);i++) {
+			/* Checks if its used */
+			if(bitmap_get(pmm_bitmap, i)) {
+				break;
+			}
+		}
+		/* Checks if it found one */
+		if(i == (start_page + pages)) {
+			/* make sure to mark the entire range of pages to used*/
+			size_t j = start_page;
+			for(j;j < (start_page + pages);j++) {
+				/* Checks if its used */
+				bitmap_set(pmm_bitmap, j);
+			}
+			/* Offsets the last allocation by the size, so it doesn't have to iterate through the known used pages */
+			pmm_last_alloc = start_page + pages;
+			return (void*)(start_page * page_size);
+		}
+		/* Didn't find a page, skip over the already tested area (optimization)*/
+		else {
+			start_page = i;
+		}
 	}
 	return NULL;
 }
 
 void* pmm_alloc(u64 pages) {
 	void* address = pmm_find_contigious(pages);
-	if(address == NULL) 
-		;
+	if(address == NULL) {
+		/* Retry allocation */
+		pmm_last_alloc = 0;
+		address = pmm_find_contigious(pages);
+		if(address == NULL) {
+			/* Okay, it's REALLY out of memory, panic */
+			panic("Out of memory!");
+		}
+	}
 	return address;
 }
 void pmm_free(void* address, u64 pages) {

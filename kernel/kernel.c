@@ -17,11 +17,11 @@ void _start(void) {
 	keyboard_init();
 	pmm_init();
 	
-	char* page = pmm_alloc(1) + 0xffff800000000000;
-	memset(page, 'A', 4095);
-	page[4095] = '\0';
+	char* page = pmm_alloc(2) + 0xffff800000000000;
+	memset(page, 'A', 8191);
+	page[8191] = '\0';
 	printf("%s %lu\n", page, strlen(page));
 
-	pmm_free(page - 0xffff800000000000, 1);
+	pmm_free(page - 0xffff800000000000, 2);
 	hang();
 }
