@@ -92,37 +92,61 @@ void pmm_init(void) {
 	}
 	
 }
-
 void* pmm_find_contigious(u64 pages) {
 	u64 start_page = pmm_last_alloc;
 	/* Iterates through the entire bitmap, finding a contiguous block */
 	for(start_page; start_page < pmm_highest_page; start_page++) {
 		size_t i = start_page;
-		for(i;i < (start_page + pages);i++) {
-			/* Checks if its used */
-			if(bitmap_get(pmm_bitmap, i)) {
-				break;
-			}
-		}
+		size_t end_page = start_page + pages;
+
+		/* Checks if entire range is used */
+		for(i; i < end_page && !bitmap_get(pmm_bitmap, i); i++)
+			;
 		/* Checks if it found one */
-		if(i == (start_page + pages)) {
-			/* make sure to mark the entire range of pages to used*/
-			size_t j = start_page;
-			for(j;j < (start_page + pages);j++) {
-				/* Checks if its used */
-				bitmap_set(pmm_bitmap, j);
+		if(i == end_page) {
+			/* Sets the entirety of the range of pages allocated to used */
+			i = start_page;
+			for(i; i < end_page; i++) {
+				/* Sets the index to used */
+				bitmap_set(pmm_bitmap, i);
 			}
 			/* Offsets the last allocation by the size, so it doesn't have to iterate through the known used pages */
-			pmm_last_alloc = start_page + pages;
+			pmm_last_alloc = end_page;
 			return (void*)(start_page * page_size);
 		}
 		/* Didn't find a page, skip over the already tested area (optimization)*/
-		else {
-			start_page = i;
-		}
+		start_page = i;
 	}
 	return NULL;
 }
+// void* pmm_find_contigious(u64 pages) {
+// 	u64 start_page = pmm_last_alloc;
+// 	/* Iterates through the entire bitmap, finding a contiguous block */
+// 	for(start_page; start_page < pmm_highest_page; start_page++) {
+// 		size_t i = start_page;
+// 		for(i;i < (start_page + pages);i++) {
+// 			/* Checks if its used */
+// 			if(bitmap_get(pmm_bitmap, i)) {
+// 				break;
+// 			}
+// 		}
+// 		/* Checks if it found one */
+// 		if(i == (start_page + pages)) {
+// 			/* Sets the entirety of the range of pages allocated to used */
+// 			size_t j = start_page;
+// 			for(j;j < (start_page + pages);j++) {
+// 				/* Sets the index to used */
+// 				bitmap_set(pmm_bitmap, j);
+// 			}
+// 			/* Offsets the last allocation by the size, so it doesn't have to iterate through the known used pages */
+// 			pmm_last_alloc = start_page + pages;
+// 			return (void*)(start_page * page_size);
+// 		}
+// 		/* Didn't find a page, skip over the already tested area (optimization)*/
+// 		start_page = i;
+// 	}
+// 	return NULL;
+// }
 
 void* pmm_alloc(u64 pages) {
 	void* address = pmm_find_contigious(pages);
